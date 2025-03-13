@@ -17,6 +17,7 @@ export const createPaciente = async (paciente) => {
     const { data } = await axios.post(API_URL, paciente);
     return data;
   } catch (error) {
+    console.log(error);
     console.error("Error creando paciente:", error);
   }
 };
